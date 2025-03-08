@@ -1,70 +1,306 @@
-# Getting Started with Create React App
+# HTTP Status Code Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React.js application for monitoring and visualizing HTTP status codes with a focus on error tracking. The dashboard provides real-time visualizations of 5xx, 4xx, and other HTTP status codes, along with relevant alerts.
 
-## Available Scripts
+LIVE DEMO:https-status-code.vercel.app
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Secure Authentication**
+  - Standard email/password login
+  - Single Sign-On (SSO) integration
+  - Secure session management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive Dashboard**
+  - Pie charts for HTTP status code distribution (5xx, 4xx, others)
+  - Top 10 recent alerts
+  - Responsive design for all device sizes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Data Range Analysis**
+  - Filter data by custom date ranges
+  - Visualize trends over time
+  - Export filtered data
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*(Add screenshots of your application here once deployed)*
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- React Router for navigation
+- Recharts for data visualization
+- CSS3 for styling
+- JWT for authentication
+- Responsive design with Flexbox/Grid
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository
+   ```
+   git clone https://github.com/yourusername/http-status-code.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project directory
+   ```
+   cd http-status-code
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Start the development server
+   ```
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open your browser and visit `http://localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+project-root/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── assets/
+│   │   └── logo.svg
+│   ├── components/
+│   │   ├── Alert.jsx
+│   │   ├── ErrorChart.jsx
+│   │   ├── Navbar.jsx
+│   │   └── DateRangePicker.jsx
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Dashboard.jsx
+│   │   └── DataRange.jsx
+│   ├── contexts/
+│   │   └── AuthContext.jsx
+│   ├── utils/
+│   │   ├── api.js
+│   │   └── helpers.js
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── Login.css
+│   │   ├── Dashboard.css
+│   │   └── DataRange.css
+│   ├── App.jsx
+│   ├── index.js
+│   └── routes.js
+├── package.json
+├── .gitignore
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+1. **Login Page**
+   - Use your email and password to log in
+   - Alternatively, use SSO options if configured
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Dashboard**
+   - View the distribution of HTTP status codes
+   - Check recent alerts
+   - Use filters to refine displayed data
 
-### Making a Progressive Web App
+3. **Data Range Page**
+   - Select custom date ranges to analyze data
+   - Export data for reporting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Configuration
 
-### Advanced Configuration
+To configure SSO providers, edit the `.env` file in the root directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+REACT_APP_SSO_GOOGLE_CLIENT_ID=your_google_client_id
+REACT_APP_SSO_GITHUB_CLIENT_ID=your_github_client_id
+```
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This application can be deployed to various platforms:
 
-### `npm run build` fails to minify
+- **Vercel/Netlify**: Connect your GitHub repo for automatic deployments
+- **GitHub Pages**: Run `npm run deploy` after setting up gh-pages
+- **AWS/Azure**: Follow cloud provider documentation for React app deployment
+LIVE DEMO :# HTTP Status Code Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A responsive React.js application for monitoring and visualizing HTTP status codes with a focus on error tracking. The dashboard provides real-time visualizations of 5xx, 4xx, and other HTTP status codes, along with relevant alerts.
+
+## Features
+
+- **Secure Authentication**
+  - Standard email/password login
+  - Single Sign-On (SSO) integration
+  - Secure session management
+
+- **Interactive Dashboard**
+  - Pie charts for HTTP status code distribution (5xx, 4xx, others)
+  - Top 10 recent alerts
+  - Responsive design for all device sizes
+
+- **Data Range Analysis**
+  - Filter data by custom date ranges
+  - Visualize trends over time
+  - Export filtered data
+
+## Screenshots
+
+*(Add screenshots of your application here once deployed)*
+
+## Technologies
+
+- React.js
+- React Router for navigation
+- Recharts for data visualization
+- CSS3 for styling
+- JWT for authentication
+- Responsive design with Flexbox/Grid
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
+
+### Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/yourusername/http-status-code.git
+   ```
+
+2. Navigate to the project directory
+   ```
+   cd http-status-code
+   ```
+
+3. Install dependencies
+   ```
+   npm install
+   ```
+
+4. Start the development server
+   ```
+   npm start
+   ```
+
+5. Open your browser and visit `http://localhost:3000`
+
+## Project Structure
+
+```
+project-root/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── assets/
+│   │   └── logo.svg
+│   ├── components/
+│   │   ├── Alert.jsx
+│   │   ├── ErrorChart.jsx
+│   │   ├── Navbar.jsx
+│   │   └── DateRangePicker.jsx
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Dashboard.jsx
+│   │   └── DataRange.jsx
+│   ├── contexts/
+│   │   └── AuthContext.jsx
+│   ├── utils/
+│   │   ├── api.js
+│   │   └── helpers.js
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── Login.css
+│   │   ├── Dashboard.css
+│   │   └── DataRange.css
+│   ├── App.jsx
+│   ├── index.js
+│   └── routes.js
+├── package.json
+├── .gitignore
+└── README.md
+```
+
+## Usage
+
+1. **Login Page**
+   - Use your email and password to log in
+   - Alternatively, use SSO options if configured
+
+2. **Dashboard**
+   - View the distribution of HTTP status codes
+   - Check recent alerts
+   - Use filters to refine displayed data
+
+3. **Data Range Page**
+   - Select custom date ranges to analyze data
+   - Export data for reporting
+
+## Configuration
+
+To configure SSO providers, edit the `.env` file in the root directory:
+
+```
+REACT_APP_SSO_GOOGLE_CLIENT_ID=your_google_client_id
+REACT_APP_SSO_GITHUB_CLIENT_ID=your_github_client_id
+```
+
+## Deployment
+
+This application can be deployed to various platforms:
+
+- **Vercel/Netlify**: Connect your GitHub repo for automatic deployments
+- **GitHub Pages**: Run `npm run deploy` after setting up gh-pages
+- **AWS/Azure**: Follow cloud provider documentation for React app deployment
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- React.js community for excellent documentation
+- Recharts for the visualization library
+- All contributors who help improve this project
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- React.js community for excellent documentation
+- Recharts for the visualization library
+- All contributors who help improve this project
